@@ -1,0 +1,36 @@
+.Button {
+  cursor: pointer;
+  outline: none;
+  background-color: #fff;
+  padding: 0.8rem 1.2rem;
+  text-transform: uppercase;
+  color: #000;
+  border: none;
+  font-weight: 700;
+  &.Secondary {
+    background-color: #4F4C94;
+    color: #fff;
+    padding: .4rem .7rem;
+    font-size: .7rem;
+    font-weight: 500;
+  }
+  &.FullWidth {
+    width: 100%;
+  }
+}
+
+.Theme2 {
+  background-color: transparent;
+  border: 2px solid #000;
+  font-family: var(--font-style-secondary);
+  letter-spacing: 0.1rem;
+  &.Secondary {
+    background-color: var(--bg-main);
+    color: #3F3F3F;
+    border: none;
+    //border-radius: .3rem;
+    padding: .6rem 1rem;
+    letter-spacing: 0.05rem;
+    box-shadow: .15rem .25rem .25rem rgba(0, 0, 0, .15);
+  }
+}

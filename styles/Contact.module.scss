@@ -1,0 +1,54 @@
+.Contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-main);
+  color: var(--font-main);
+  .Container {
+    width: 100%;
+    max-width: 50rem;
+  }
+  h1 {
+    font-weight: 600;
+    text-align: center;
+    font-family: var(--font-style-secondary);
+    text-transform: uppercase;
+  }
+  
+  p {
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  
+  .Form {
+    background-color: #FAFAFA;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    >div {
+      padding: 1rem 1rem;
+      .FormEl {
+        padding-bottom: 1rem;
+        label {
+          color: #363467;
+          font-weight: 500;
+          font-size: 1rem;
+          font-family: var(--font-style-secondary);
+          display: block;
+          padding-bottom: .4rem;
+        }
+      }
+    }
+    >div:first-child {
+      height: 100%;
+    }
+  }
+}
+
+.Theme2 {
+  .Form >div .FormEl label {
+    color: #C88305;
+  }
+}

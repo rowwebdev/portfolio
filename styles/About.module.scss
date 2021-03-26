@@ -1,0 +1,118 @@
+.About {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-main);
+}
+
+.Container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  height: 100%;
+  max-width: 1000px;
+  color: var(--font-main);
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "About";
+    transform: rotate(-90deg) translateX(-100%);
+    transform-origin: 0% 0%;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 8rem;
+    font-size: 10rem;
+    color: #000;
+    opacity: .15;
+    z-index: 1;
+  }
+  .Left {
+    color: #fff;
+    padding: 4rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      color: #c6c6c6;
+      text-transform: uppercase;
+      font-size: 1rem;
+      line-height: 1rem;
+      font-weight: 400;
+      margin: 0px;
+    }
+    h1 {
+      font-weight: 500;
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      text-transform: uppercase;
+      margin: 0px;
+      color: var(--font-main);
+    }
+    p {
+      font-size: 0.9rem;
+      &:nth-child(5) {
+        padding-bottom: 2rem;
+      }
+    }
+  }
+  .Center,
+  .Right {
+    display: flex;
+    flex-direction: column;
+  }
+  .Image {
+    height: 52%;
+  }
+  .Text {
+    flex-grow: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 3rem;
+    h3 {
+      margin: 0px;
+      color: #4f4c94;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+  .Center {
+    .Image {
+      background-image: url("/assets/me.png");
+      background-position: top;
+      background-size: cover;
+    }
+  }
+  .Right {
+    .Image {
+      background-image: url("/assets/runner.jpeg");
+      background-position: left;
+      background-size: cover;
+    }
+  }
+}
+
+.Theme2 {
+  .Container {
+    &:after, h1, h2, h3 {
+      font-family: var(--font-style-secondary);
+    }
+    h2 {
+      color: #555555;
+    }
+    h3 {
+      color: #C88305;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #000;
+    }
+  }
+}
