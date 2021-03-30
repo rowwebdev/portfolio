@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F8F8F8;
-  font-size: .9rem;
+  background-color: #f8f8f8;
+  font-size: 0.9rem;
 }
 
 .Container {
@@ -12,7 +12,9 @@
   height: 100%;
   max-width: 1000px;
   width: 100%;
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: var(--font-style-secondary);
   }
   h1 {
@@ -30,8 +32,8 @@
       font-size: 1rem;
       font-weight: 400;
       line-height: 1rem;
-      margin:0px;
-      padding: .4rem 0px;
+      margin: 0px;
+      padding: 0.4rem 0px;
     }
     h1 {
       text-transform: uppercase;
@@ -42,7 +44,7 @@
       background-color: var(--bg-main);
       margin: 0px;
       padding: 1rem 2rem;
-      box-shadow: .25rem .25rem 1.3rem 0px rgba(0, 0, 0, .4);
+      box-shadow: 0.25rem 0.25rem 1.3rem 0px rgba(0, 0, 0, 0.4);
     }
     .Text {
       padding: 3rem 2rem 0px 3rem;
@@ -51,7 +53,7 @@
     p {
       color: #454545;
     }
-  }  
+  }
 }
 
 .Right {
@@ -60,20 +62,20 @@
     padding: 1rem 1rem 1rem 2rem;
     background-color: #fff;
     display: flex;
-    box-shadow: 0px 0px 1.5rem 0px rgba(0, 0, 0, .10);
-    border-radius: .5rem;
+    box-shadow: 0px 0px 1.5rem 0px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
     margin: 1rem 0px;
     .Description {
       padding-right: 1rem;
       h3 {
         margin: 0px;
-        color: #4F4C94;
+        color: #4f4c94;
         text-transform: uppercase;
         font-size: 1rem;
       }
     }
     .Picture {
-      background-image: url('/assets/portfolio.png');
+      background-image: url("/assets/portfolio.png");
       background-position: center;
       background-size: cover;
       width: 10rem;
@@ -90,10 +92,10 @@
   height: 100vh;
   max-width: 100%;
   width: 30rem;
-  background-color: #3E3B79;
+  background-color: var(--bg-main);
   color: #fff;
   padding: 2rem 3rem;
-  box-shadow: -.3rem 0px 1.5rem rgba(0, 0, 0, .4);
+  box-shadow: -0.3rem 0px 1.5rem rgba(0, 0, 0, 0.4);
   header {
     display: flex;
     justify-content: space-between;
@@ -103,19 +105,23 @@
       text-transform: uppercase;
       font-weight: 500;
       font-size: 2.5rem;
+      font-style: var(--font-style-main);
+      color: var(--font-main);
     }
     svg {
       width: 3rem;
       height: 3rem;
+      color: var(--font-main);
+      cursor: pointer;
     }
   }
   p {
-    color: #CECECE;
+    color: #cecece;
   }
   .Icons {
     padding: 2rem 0rem 3rem 0rem;
     svg {
-      color: #fff;
+      color: var(--font-main);
       width: 3rem;
       height: 3rem;
       margin: 0px 1rem 0px 0px;
@@ -125,10 +131,13 @@
 
 .Theme2 {
   .Right .Project .Description h3 {
-    color: #C88305;
+    color: #c88305;
   }
   p {
     font-size: 1.1rem;
-    color: #3E3E3E;
+    color: #3e3e3e;
+  }
+
+  .ProjectDetails {
   }
 }

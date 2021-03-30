@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Button from "../Button";
 
 import ThemeContext from "../../context/theme-context";
@@ -7,7 +7,12 @@ import sectionStyles from "../../styles/Section.module.scss";
 import styles from "../../styles/Projects.module.scss";
 
 const Projects = () => {
+  const [projectId, setProjectId] = useState(null);
   const theme = useContext(ThemeContext);
+
+  const readMoreClicked = (id) => {
+    setProjectId(id);
+  };
 
   return (
     <section
@@ -31,17 +36,17 @@ const Projects = () => {
           </header>
         </div>
         <div className={styles.Right}>
-          <Project />
-          <Project />
-          <Project />
+          <Project readMoreClicked={readMoreClicked} />
+          <Project readMoreClicked={readMoreClicked} />
+          <Project readMoreClicked={readMoreClicked} />
         </div>
       </div>
-      {/* <ProjectDetails /> */}
+      {projectId && <ProjectDetails onClose={() => setProjectId(null)} />}
     </section>
   );
 };
 
-const Project = () => {
+const Project = ({ readMoreClicked }) => {
   return (
     <div className={styles.Project}>
       <div className={styles.Description}>
@@ -51,23 +56,27 @@ const Project = () => {
           point.
         </p>
         <p>This was my first time using NextJS and Netlify.</p>
-        <Button secondary>Read More</Button>
+        <Button secondary onClick={readMoreClicked}>
+          Read More
+        </Button>
       </div>
       <div className={styles.Picture}></div>
     </div>
   );
 };
 
-const ProjectDetails = () => {
+const ProjectDetails = ({ onClose }) => {
   return (
     <div className={styles.ProjectDetails}>
       <header>
         <h1>Portfolio</h1>
-        <span
-          class="iconify"
-          data-icon="grommet-icons:form-close"
-          data-inline="false"
-        ></span>
+        <div onClick={onClose}>
+          <span
+            class="iconify"
+            data-icon="grommet-icons:form-close"
+            data-inline="false"
+          ></span>
+        </div>
       </header>
       <p>
         This was created out of a need to have something more the a docx CV to

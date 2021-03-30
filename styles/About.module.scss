@@ -24,7 +24,7 @@
     line-height: 8rem;
     font-size: 10rem;
     color: #000;
-    opacity: .15;
+    opacity: 0.15;
     z-index: 1;
   }
   .Left {
@@ -81,6 +81,7 @@
     }
     p {
       font-size: 0.8rem;
+      color: #6b6b6b;
     }
   }
   .Center {
@@ -101,14 +102,17 @@
 
 .Theme2 {
   .Container {
-    &:after, h1, h2, h3 {
+    &:after,
+    h1,
+    h2,
+    h3 {
       font-family: var(--font-style-secondary);
     }
     h2 {
       color: #555555;
     }
     h3 {
-      color: #C88305;
+      color: #c88305;
     }
     p {
       font-size: 1.1rem;
